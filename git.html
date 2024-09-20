@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machete de GIT y GITHUB</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/git.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/17be17dbbb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./configuracion.html">Configuración</a></li>
+                <li><a href="./git_bash.html">Git Bash</a></li>
+                <li><a href="./gitignore.html">.gitignore</a></li>
+                <li><a class="active" href="./git.html">GIT</a></li>
+                <li><a href="./ramas.html">Ramas</a></li>
+                <li><a href="./github.html">GITHUB</a></li>
+            </ul>
+        </nav>
+        <h1>Flujo de trabajo con GIT</h1>
+    </header>
+
+    <main>
+
+        <div class="grid-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git add archivo</span>
+            </div>
+            <div class="celda untracked">Untracked</div>
+            <div class="celda">Unmodified</div>
+            <div class="celda">Modified</div>
+            <div class="celda staged">Staged</div>
+            <div class="fila-completa">
+                <div class="archivo git-add-archivo">
+                    <i class="fa-regular fa-file no-padding"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git rm --cached archivo</span>
+            </div>
+            <div class="celda untracked">Untracked</div>
+            <div class="celda">Unmodified</div>
+            <div class="celda">Modified</div>
+            <div class="celda staged">Staged</div>
+            <div class="fila-completa">
+                <div class="archivo git-rm">
+                    <i class="fa-regular fa-file no-padding"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git commit -m "mensaje"</span> el mensaje debe
+                describir los cambios hechos.
+            </div>
+            <div class="celda">Untracked</div>
+            <div class="celda unmodified">Unmodified</div>
+            <div class="celda">Modified</div>
+            <div class="celda staged">Staged</div>
+            <div class="fila-completa">
+                <div class="archivo git-commit">
+                    <i class="fa-regular fa-file no-padding"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git restore archivo</span> restaura un archivo
+                que fue modificado.
+            </div>
+            <div class="celda">Untracked</div>
+            <div class="celda unmodified">Unmodified</div>
+            <div class="celda modified">Modified</div>
+            <div class="celda">Staged</div>
+            <div class="fila-completa">
+                <div class="archivo git-restore">
+                    <i class="fa-regular fa-file no-padding"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git add archivo</span> confirma las
+                modificaciones hechas a un archivo.
+            </div>
+            <div class="celda">Untracked</div>
+            <div class="celda">Unmodified</div>
+            <div class="celda modified">Modified</div>
+            <div class="celda staged">Staged</div>
+            <div class="fila-completa">
+                <div class="archivo git-add-modificaciones">
+                    <i class="fa-regular fa-file no-padding"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git commit -am "mensaje"</span> el mensaje
+                debe describir los cambios hechos.
+            </div>
+            <div class="celda untracked">Untracked</div>
+            <div class="celda unmodified">Unmodified</div>
+            <div class="celda">Modified</div>
+            <div class="celda">Staged</div>
+            <div class="fila-completa">
+                <div class="archivo git-add-commit">
+                    <i class="fa-regular fa-file no-padding"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git status</span> muestra en que estado se
+                encuentran los archivos.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git status -s</span> muestra en que estado se
+                encuentran los archivos de forma menos verbosa.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git log --oneline</span> muestra el historial
+                de commits de forma menos verbosa.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git diff</span> muestra los cambios hechos
+                sobre los archivos.
+            </div>
+            <div class="fila">
+                <i class="fa-regular fa-comment"></i><span class="comentario">La mayoría de las veces, se muestra que
+                    comandos pueden ejecutar a continuación.</span>
+            </div>
+            <div class="fila">
+                <i class="fa-regular fa-comment"></i><span class="comentario">Cada commit que se haga va a tener un hash
+                    que lo identifica.</span>
+            </div>
+            <div class="fila">
+                <i class="fa-regular fa-comment"></i><span class="comentario">En un mismo comando, se puede afectar a
+                    más de un archivo si se colocan sus nombres separados por un espacio.</span>
+            </div>
+            <div class="fila">
+                <i class="fa-regular fa-comment"></i><span class="comentario">En un mismo comando, se puede afectar a
+                    todos los archivos del repositorio utilizando el caracter . como comodín.</span>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 0;
+    margin: 0 15% 20px 15%;
+    padding: 0 0 10px 0;
+    background-color: lightgrey;
+}
+
+.grid-container>div.celda {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.grid-container>div.untracked {
+    background-color: crimson;
+}
+
+.grid-container>div.staged {
+    background-color: greenyellow;
+}
+
+.grid-container>div.modified {
+    background-color: goldenrod;
+}
+
+.grid-container>div.unmodified {
+    background-color: aquamarine;
+}
+
+.grid-container>div.fila-completa {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+div.archivo {
+    margin: 0;
+    padding: 10px 0;
+    width: 25%;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+i.no-padding {
+    padding: 0;
+}
+
+.grid-container>div.fila {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+@keyframes untracked-a-staged {
+    from {
+        position: relative;
+        left: 0%;
+        background-color: crimson;
+    }
+
+    to {
+        position: relative;
+        left: 75%;
+        background-color: greenyellow;
+    }
+}
+
+.git-add-archivo {
+    animation: untracked-a-staged 4s ease-in-out infinite;
+}
+
+@keyframes staged-a-untracked {
+    from {
+        position: relative;
+        left: 75%;
+        background-color: greenyellow;
+    }
+
+    to {
+        position: relative;
+        left: 0%;
+        background-color: crimson;
+    }
+}
+
+.git-rm {
+    animation: staged-a-untracked 4s ease-in-out infinite;
+}
+
+@keyframes staged-a-unmodified {
+    from {
+        position: relative;
+        left: 75%;
+        background-color: greenyellow;
+    }
+
+    to {
+        position: relative;
+        left: 25%;
+        background-color: aquamarine;
+    }
+}
+
+.git-commit {
+    animation: staged-a-unmodified 4s ease-in-out infinite;
+}
+
+@keyframes modified-a-unmodified {
+    from {
+        position: relative;
+        left: 50%;
+        background-color: goldenrod;
+    }
+
+    to {
+        position: relative;
+        left: 25%;
+        background-color: aquamarine;
+    }
+}
+
+.git-restore {
+    animation: modified-a-unmodified 4s ease-in-out infinite;
+}
+
+@keyframes modified-a-staged {
+    from {
+        position: relative;
+        left: 50%;
+        background-color: goldenrod;
+    }
+
+    to {
+        position: relative;
+        left: 75%;
+        background-color: greenyellow;
+    }
+}
+
+.git-add-modificaciones {
+    animation: modified-a-staged 4s ease-in-out infinite;
+}
+
+@keyframes untracked-a-unmodified {
+    from {
+        position: relative;
+        left: 0%;
+        background-color: crimson;
+    }
+
+    to {
+        position: relative;
+        left: 25%;
+        background-color: aquamarine;
+    }
+}
+
+.git-add-commit {
+    animation: untracked-a-unmodified 4s ease-in-out infinite;
+}

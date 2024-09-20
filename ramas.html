@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machete de GIT y GITHUB</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/ramas.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/17be17dbbb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./configuracion.html">Configuración</a></li>
+                <li><a href="./git_bash.html">Git Bash</a></li>
+                <li><a href="./gitignore.html">.gitignore</a></li>
+                <li><a href="./git.html">GIT</a></li>
+                <li><a class="active" href="./ramas.html">Ramas</a></li>
+                <li><a href="./github.html">GITHUB</a></li>
+            </ul>
+        </nav>
+        <h1>Ramas en GIT</h1>
+    </header>
+
+    <main>
+
+        <div class="grid-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git checkout -b rama</span> crea una nueva
+                rama y nos lleva a ella.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git branch</span> muestra las ramas que
+                existen y en cual estamos.
+            </div>
+
+            <!-- Grafo -->
+            <div class="commit">Commit 1</div>
+            <div class="path"></div>
+            <div class="commit">Commit 2</div>
+            <div class="completar"></div>
+            <div class="celda">master</div>
+
+            <div class="celda"></div>
+            <div class="celda"></div>
+            <div class="rama"></div>
+            <div class="cerrar"></div>
+
+            <div class="celda"></div>
+            <div class="celda"></div>
+            <div class="commit head">Commit 2 (HEAD)</div>
+            <div class="completar"></div>
+            <div class="celda">rama1</div>
+
+            <div class="fila">
+                <i class="fa-regular fa-comment"></i><span class="comentario">El HEAD apunta al último commit de la rama
+                    en la que estamos.</span>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git switch rama</span> nos lleva a otra rama.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git merge rama</span> hace converger otra rama
+                en la que estamos.
+            </div>
+
+            <!-- Grafo -->
+            <div class="commit">Commit 1</div>
+            <div class="path"></div>
+            <div class="commit">Commit 2</div>
+            <div class="path"></div>
+            <div class="commit">Commit 3</div>
+            <div class="path"></div>
+            <div class="commit head">Commit 4 (HEAD)</div>
+            <div class="completar"></div>
+            <div class="celda">master</div>
+
+            <div class="celda"></div>
+            <div class="celda"></div>
+            <div class="rama"></div>
+            <div class="celda"></div>
+            <div class="celda"></div>
+            <div class="celda"></div>
+            <div class="rama"></div>
+            <div class="cerrar"></div>
+
+            <div class="celda"></div>
+            <div class="celda"></div>
+            <div class="commit">Commit 2</div>
+            <div class="path"></div>
+            <div class="path"></div>
+            <div class="path"></div>
+            <div class="commit">Commit 2.1</div>
+            <div class="completar"></div>
+            <div class="celda">rama1</div>
+
+            <div class="fila">
+                <i class="fa-regular fa-comment"></i><span class="comentario">Resolver los conflictos que pueden
+                    aparecer al hacer merge en
+                    Visual Studio Code.</span>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git tag "etiqueta"</span> le agrega una
+                etiqueta al HEAD.
+            </div>
+            <div class="fila">
+                <i class="fa-regular fa-comment"></i><span class="comentario">Las etiquetas se utilizan en commits
+                    importantes y suelen ser numeros de versión como "v0.1.0".</span>
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git checkout etiqueta</span> restaura los
+                archivos al estado que tenían en un commit anterior de la rama en la que estamos.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git checkout hash</span> restaura los
+                archivos al estado que tenían en un commit anterior de la rama en la que estamos.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git branch -d rama</span> elimina una rama.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git reset --hard hash</span> nos lleva a un
+                commit anterior de la rama en la que estamos y borra los posteriores al de destino.
+            </div>
+            <div class="fila">
+                <i class="fa-regular fa-comment"></i><span class="comentario">Tener mucho cuidado al utilizar los dos
+                    comandos anteriores.</span>
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git stash</span> crea un commit temporal donde
+                se guardan las modificaciones hechas sobre el HEAD.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git stash list</span> muestra los commits
+                temporales hechos en la rama en la que estamos.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git stash pop</span> restaura las
+                modificaciones guardadas en los commits temporales al volver a la rama donde se los creó.
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

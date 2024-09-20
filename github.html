@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machete de GIT y GITHUB</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/github.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/17be17dbbb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./configuracion.html">Configuración</a></li>
+                <li><a href="./git_bash.html">Git Bash</a></li>
+                <li><a href="./gitignore.html">.gitignore</a></li>
+                <li><a href="./git.html">GIT</a></li>
+                <li><a href="./ramas.html">Ramas</a></li>
+                <li><a class="active" href="./github.html">GITHUB</a></li>
+            </ul>
+        </nav>
+        <h1>GITHUB</h1>
+    </header>
+
+    <main>
+
+        <div class="flex-container">
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git remote add origin url</span> vincula el
+                repositorio de GIT con el de GITHUB.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git push -u origin rama</span> envía el
+                último commit de la rama a GITHUB y la establece como predeterminada.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git push</span> envía el
+                último commit de la rama en la que estamos a GITHUB.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git pull</span> trae el
+                último commit de la rama en la que estamos de GITHUB.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git branch -u origin/master</span> soluciona
+                el error que puede aparecer al hacer un pull.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git push origin --delete rama</span> borra
+                una rama en GITHUB.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git fetch</span> trae el historial de commits
+                de GITHUB.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git log --online --all</span> muestra el
+                historial de commits de GITHUB.
+            </div>
+            <div class="fila">
+                <i class="fa-brands fa-git-alt"></i><span class="comando">git clone url</span> regenera un repositorio
+                de GIT a partir de uno de GITHUB y los vincula.
+            </div>
+            <div class="fila">
+                <i class="fa-regular fa-comment"></i><span class="comentario">Fork crea un repositorio a partir de uno
+                    de terceros en GITHUB.</span>
+            </div>
+            <div class="fila">
+                <i class="fa-regular fa-comment"></i><span class="comentario">Open pull request genera una
+                    solicitud para que el dueño del repositorio, del cual hicimos un fork, nos permita hacer un
+                    merge.</span>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
