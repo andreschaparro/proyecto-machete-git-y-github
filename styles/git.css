@@ -1,60 +1,54 @@
 .grid-container {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    gap: 0;
+    grid-template-columns: repeat(4, 1fr);
     margin: 0 15% 20px 15%;
-    padding: 0 0 10px 0;
+    padding: 0 0 20px 0;
     background-color: lightgrey;
 }
 
-.grid-container>div.celda {
-    margin: 0;
-    padding: 10px;
+.grid-container div {
     font-size: 1.5em;
+}
+
+.fila-izquierda {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 20px;
+    text-align: left;
+}
+
+.celda {
+    padding: 20px;
     text-align: center;
 }
 
-.grid-container>div.untracked {
+.untracked {
     background-color: crimson;
 }
 
-.grid-container>div.staged {
+.staged {
     background-color: greenyellow;
 }
 
-.grid-container>div.modified {
+.modified {
     background-color: goldenrod;
 }
 
-.grid-container>div.unmodified {
+.unmodified {
     background-color: aquamarine;
 }
 
-.grid-container>div.fila-completa {
+.fila-centrada {
     grid-column-start: 1;
     grid-column-end: -1;
 }
 
 div.archivo {
-    margin: 0;
     padding: 10px 0;
     width: 25%;
-    font-size: 1.5em;
     text-align: center;
 }
 
-i.no-padding {
-    padding: 0;
-}
-
-.grid-container>div.fila {
-    grid-column-start: 1;
-    grid-column-end: -1;
-    margin: 0;
-    padding: 10px 20px;
-    text-align: left;
-    font-size: 1.5em;
-}
 
 @keyframes untracked-a-staged {
     from {

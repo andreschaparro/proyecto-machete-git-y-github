@@ -1,54 +1,53 @@
 body {
     font-family: monospace;
     margin: 0;
-
 }
 
-header {
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-nav>ul {
-    list-style-type: none;
     background-color: grey;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
 }
 
-nav>ul>li>a {
-    text-decoration: none;
-    color: white;
-    font-size: 0.8em;
-    display: block;
-    padding: 10px 20px;
-    border-right: 1px solid lightgray;
+li {
     float: left;
 }
 
-nav>ul>li>a:hover {
-    background-color: royalblue
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    border-right: 1px solid lightgray;
+    text-decoration: none;
 }
 
-nav>ul>li>a.active {
-    background-color: royalblue;
+li a:hover:not(.active) {
+    background-color: seagreen
+}
+
+.active {
+    background-color: seagreen;
 }
 
 .flex-container {
     display: flex;
     flex-direction: column;
     margin: 0 15% 20px 15%;
-    align-content: center;
     padding: 0;
     background-color: lightgrey;
 }
 
-.flex-container>div.fila {
+.flex-container>div {
     margin: 0;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: left;
     font-size: 1.5em;
 }
@@ -57,14 +56,14 @@ i {
     padding: 0 10px 0 0;
 }
 
-span.comando {
+.comando {
     font-weight: bold;
 }
 
-span.opcion {
+.opcion {
     font-weight: bold;
 }
 
-span.comentario {
+.comentario {
     font-style: italic;
 }
