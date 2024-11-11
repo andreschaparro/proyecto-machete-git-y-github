@@ -2,6 +2,8 @@
 
 [LINK A LA WEB(NETLIFY)](https://proyecto-machete-git-y-github.netlify.app/)
 
+## Documentación
+
 - [GIT](https://git-scm.com/doc).
 - [GITHUB](https://docs.github.com/es).
 
